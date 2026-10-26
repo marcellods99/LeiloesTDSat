@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /*
@@ -140,7 +141,11 @@ public class listagemVIEW extends javax.swing.JFrame {
         
         ProdutosDAO produtosdao = new ProdutosDAO();
         
-        produtosdao.venderProduto(Integer.parseInt(id));
+        try {
+            produtosdao.venderProduto(Integer.parseInt(id));
+        } catch (NumberFormatException erro) {
+            JOptionPane.showMessageDialog(null, "Digite um ID válido!");
+        }
         listarProdutos();
     }//GEN-LAST:event_btnVenderActionPerformed
 
