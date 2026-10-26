@@ -44,7 +44,7 @@ INSERT INTO `produtos` VALUES
 (4,'Iphone 12',4800,'Vendido'),
 (5,'PS2',400,'A Venda'),
 (6,'Notebook',2500,'A Venda'),
-(7,'Monitor',900,'A Venda');
+(7,'Monitor',900,'Vendido');
 /*!40000 ALTER TABLE `produtos` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -59,4 +59,4 @@ SET AUTOCOMMIT=@OLD_AUTOCOMMIT;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2026-10-26 16:34:39
+-- Dump completed on 2026-10-26 16:41:14
