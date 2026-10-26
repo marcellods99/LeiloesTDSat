@@ -22,7 +22,7 @@ public class ProdutosDAO {
     ResultSet resultset;
     ArrayList<ProdutosDTO> listagem = new ArrayList<>();
     
-    public void cadastrarProduto (ProdutosDTO produto){
+    public boolean cadastrarProduto (ProdutosDTO produto){
         
         
         conn = new conectaDAO().connectDB();
@@ -33,8 +33,10 @@ public class ProdutosDAO {
             prep.setInt(2, produto.getValor());
             prep.setString(3, produto.getStatus());
             prep.execute();
+            return true;
         } catch (Exception erro) {
             System.out.println("Erro ao cadastrar: " + erro.getMessage());
+            return false;
         }
     }
     
